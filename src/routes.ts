@@ -5,13 +5,7 @@ import { UpdateUserController} from "./controllers/UpdateUserController";
 import { DeleteUserController} from "./controllers/DeleteUserController";
 import {AuthenticateUserController} from "./controllers/AuthenticateUserController";
 import { ensureAuthenticated} from "./midleware/ensureAuthenticated";
-/*
-
-
-import { ensureAdmin} from "./middlewares/ensureAdmin";
-
-
-*/
+import { ensureAdmin} from "./midleware/ensureAdmin";
 
 const autenticationUserController  = new AuthenticateUserController();
 const createUserController  = new CreateUserController();
@@ -28,13 +22,7 @@ router.post("/users", createUserController.handle);
 router.use(ensureAuthenticated)
 router.get("/users", listUsersController.handle);
 router.put("/users", updateUserController.handle);
+router.use(ensureAdmin)
 router.delete("/users/:id", deleteUserController.handle);
 
-
-
-/*
-router.get("/users",  ensureAuthenticated,ensureAdmin,listUsersController.handle);
-router.use(ensureAdmin)
-
-*/
 export {router}
