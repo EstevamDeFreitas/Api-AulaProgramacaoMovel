@@ -8,7 +8,7 @@ import {
 import { v4 as uuid } from "uuid";
 
 @Entity("users")
-class User {
+class ProductEntites {
   @PrimaryColumn()
   readonly id!: string;
 
@@ -16,13 +16,13 @@ class User {
   name!: string;
 
   @Column()
-  email!: string;
+  description!: string;
 
   @Column()
-  admin!: boolean;
+  price!: string;
 
   @Column()
-  password!: string;
+  url!: string;
 
   @CreateDateColumn()
   created_at!: Date;
@@ -37,4 +37,4 @@ class User {
   }
 }
 
-export { User };
+export { ProductEntites };
