@@ -8,7 +8,7 @@ import {
 import { v4 as uuid } from "uuid";
 
 @Entity("users")
-class ProductEntites {
+class ProductEntities {
   @PrimaryColumn()
   readonly id!: string;
 
@@ -37,4 +37,4 @@ class ProductEntites {
   }
 }
 
-export { ProductEntites };
+export { ProductEntities };
