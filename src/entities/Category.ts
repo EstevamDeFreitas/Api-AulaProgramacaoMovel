@@ -7,8 +7,8 @@ import {
 } from "typeorm";
 import { v4 as uuid } from "uuid";
 
-@Entity("users")
-class CategoryEntities {
+@Entity("categories")
+class Category {
   @PrimaryColumn()
   readonly id!: string;
 
@@ -28,4 +28,4 @@ class CategoryEntities {
   }
 }
 
-export { CategoryEntities };
+export { Category };

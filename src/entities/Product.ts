@@ -7,8 +7,8 @@ import {
 } from "typeorm";
 import { v4 as uuid } from "uuid";
 
-@Entity("users")
-class ProductEntities {
+@Entity("products")
+class Product {
   @PrimaryColumn()
   readonly id!: string;
 
@@ -19,7 +19,7 @@ class ProductEntities {
   description!: string;
 
   @Column()
-  price!: string;
+  price!: number;
 
   @Column()
   url!: string;
@@ -37,4 +37,4 @@ class ProductEntities {
   }
 }
 
-export { ProductEntities };
+export { Product };
