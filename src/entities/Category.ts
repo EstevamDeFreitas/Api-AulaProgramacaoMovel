@@ -13,7 +13,10 @@ class Category {
   readonly id!: string;
 
   @Column()
-  name!: string;
+  categoryId!: string;
+
+  @Column()
+  categoryName!: string;
 
   @CreateDateColumn()
   created_at!: Date;
