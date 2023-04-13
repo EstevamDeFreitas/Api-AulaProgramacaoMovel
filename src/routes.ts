@@ -27,6 +27,11 @@ import { CreateProductController } from "./controllers/Product/CreateProductCont
 import { UpdateProductController } from "./controllers/Product/UpdateProductController";
 import { DeleteProductController } from "./controllers/Product/DeleteProductController";
 import { GetProductController } from "./controllers/Product/GetProductController";
+import { ListDeliveryController } from "./controllers/Delivery/ListDeliveryController";
+import { CreateDeliveryController } from "./controllers/Delivery/CreateDeliveryController";
+import { DeleteDeliveryController } from "./controllers/Delivery/DeleteDeliveryController";
+import { UpdateDeliveryController } from "./controllers/Delivery/UpdateDeliveryController";
+import { GetDeliveryController } from "./controllers/Delivery/GetDeliveryController";
 
 const autenticationUserController = new AuthenticateUserController();
 const createUserController = new CreateUserController();
@@ -52,6 +57,12 @@ const deleteProductController = new DeleteProductController();
 const updateProductController = new UpdateProductController();
 const getProductController = new GetProductController();
 
+const listDeliveryController = new ListDeliveryController();
+const createDeliveryController = new CreateDeliveryController();
+const deleteDeliveryController = new DeleteDeliveryController();
+const updateDeliveryController = new UpdateDeliveryController();
+const getDeliveryController = new GetDeliveryController();
+
 const router = Router();
 
 router.post("/login", autenticationUserController.handle);
@@ -75,10 +86,16 @@ router.put("/category", updateCategoryController.handle);
 router.delete("/category/:id", deleteCategoryController.handle);
 router.get("/category/:id", getCategoryController.handle);
 
-router.get("/category", listProductController.handle);
-router.post("/category", createProductController.handle);
-router.put("/category", updateProductController.handle);
-router.delete("/category/:id", deleteProductController.handle);
-router.get("/category/:id", getProductController.handle);
+router.get("/product", listProductController.handle);
+router.post("/product", createProductController.handle);
+router.put("/product", updateProductController.handle);
+router.delete("/product/:id", deleteProductController.handle);
+router.get("/product/:id", getProductController.handle);
+
+router.get("/delivery", listDeliveryController.handle);
+router.post("/delivery", createDeliveryController.handle);
+router.put("/delivery", updateDeliveryController.handle);
+router.delete("/delivery/:id", deleteDeliveryController.handle);
+router.get("/delivery/:id", getDeliveryController.handle);
 
 export {router}

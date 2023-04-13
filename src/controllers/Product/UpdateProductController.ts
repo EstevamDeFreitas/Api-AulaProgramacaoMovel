@@ -4,6 +4,7 @@ import { UpdateProductService } from "../../services/Product/UpdateProductServic
 class UpdateProductController {
   async handle(request: Request, response: Response) {
     const product: {
+      id:string;
       productId: string;
       productName: string;
       description: string;
