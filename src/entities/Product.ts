@@ -13,7 +13,10 @@ class Product {
   readonly id!: string;
 
   @Column()
-  name!: string;
+  productId!: string;
+
+  @Column()
+  productName!: string;
 
   @Column()
   description!: string;
