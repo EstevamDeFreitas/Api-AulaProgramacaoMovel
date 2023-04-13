@@ -21,13 +21,6 @@ import { UpdateCategoryController } from "./controllers/Category/UpdateCategoryC
 import { DeleteCategoryController } from "./controllers/Category/DeleteCategoryController";
 import { GetCategoryController } from "./controllers/Category/GetCategoryController";
 
-import { ListProductService } from "./services/Product/ListProductService";
-import { ListProductController } from "./controllers/Product/ListProductController";
-import { CreateProductController } from "./controllers/Product/CreateProductController";
-import { UpdateProductController } from "./controllers/Product/UpdateProductController";
-import { DeleteProductController } from "./controllers/Product/DeleteProductController";
-import { GetProductController } from "./controllers/Product/GetProductController";
-
 const autenticationUserController = new AuthenticateUserController();
 const createUserController = new CreateUserController();
 const listUsersController = new ListUsersController();
@@ -45,12 +38,6 @@ const createCategoryController = new CreateCategoryController();
 const deleteCategoryController = new DeleteCategoryController();
 const updateCategoryController = new UpdateCategoryController();
 const getCategoryController = new GetCategoryController();
-
-const listProductController = new ListProductController();
-const createProductController = new CreateProductController();
-const deleteProductController = new DeleteProductController();
-const updateProductController = new UpdateProductController();
-const getProductController = new GetProductController();
 
 const router = Router();
 
@@ -74,11 +61,5 @@ router.post("/category", createCategoryController.handle);
 router.put("/category", updateCategoryController.handle);
 router.delete("/category/:id", deleteCategoryController.handle);
 router.get("/category/:id", getCategoryController.handle);
-
-router.get("/category", listProductController.handle);
-router.post("/category", createProductController.handle);
-router.put("/category", updateProductController.handle);
-router.delete("/category/:id", deleteProductController.handle);
-router.get("/category/:id", getProductController.handle);
 
 export {router}
