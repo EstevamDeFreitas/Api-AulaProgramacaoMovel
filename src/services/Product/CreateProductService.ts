@@ -2,7 +2,6 @@ import { getCustomRepository } from "typeorm";
 import { ProductRepositories } from "../../repositories/ProductRepositories";
 
 interface IProductRequest {
-  productId: string;
   productName: string;
   description: string;
   price: number;

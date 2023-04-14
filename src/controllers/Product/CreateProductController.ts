@@ -4,7 +4,6 @@ import { CreateProductService } from "../../services/Product/CreateProductServic
 class CreateProductController {
   async handle(request: Request, response: Response) {
     const product: {
-      productId: string;
       productName: string;
       description: string;
       price: number;
