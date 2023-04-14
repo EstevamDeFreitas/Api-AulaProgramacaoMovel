@@ -3,7 +3,7 @@ import { UpdateCategoryService } from "../../services/Category/UpdateCategorySer
 
 class UpdateCategoryController {
   async handle(request: Request, response: Response) {
-    const category: { id: string; categoryId: string; categoryName: string } = request.body;
+    const category: { id: string; categoryName: string } = request.body;
 
     const categoryService = new UpdateCategoryService();
 

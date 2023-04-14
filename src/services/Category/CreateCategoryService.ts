@@ -2,7 +2,6 @@ import { getCustomRepository } from "typeorm";
 import { CategoryRepositories } from "../../repositories/CategoryRepositories";
 
 interface ICategoryRequest {
-  categoryId: string;
   categoryName: string;
 }
 
