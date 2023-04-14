@@ -3,7 +3,6 @@ import { ProductRepositories } from "../../repositories/ProductRepositories";
 
 interface IProductRequest {
   id: string;
-  productId: string;
   productName: string;
   description: string;
   price: number;
@@ -20,7 +19,6 @@ class UpdateProductService {
       throw new Error("Product not found");
     }
 
-    productFound.productId = product.productId;
     productFound.productName = product.productName;
     productFound.description = product.description;
     productFound.price = product.price;

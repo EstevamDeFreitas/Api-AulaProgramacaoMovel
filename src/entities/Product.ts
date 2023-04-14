@@ -13,9 +13,6 @@ class Product {
   readonly id!: string;
 
   @Column()
-  productId!: string;
-
-  @Column()
   productName!: string;
 
   @Column()
